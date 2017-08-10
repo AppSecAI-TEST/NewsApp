@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">NewsApp</string>
+
+    <string name="no_news">No news found</string>
+
+    <string name="no_internet">No net connection</string>
+
+    <string name="author">Author of the news</string>
+
+    <string name="title">Title of the news</string>
+
+    <string name="section">Section of the news</string>
+
+    <string name="published_date">Publishing date of the news</string>
+
+    <!-- Settings Menu Item [CHAR LIMIT=NONE] -->
+    <string name="settings_menu_item">Settings</string>
+    <!-- Settings Activity Title [CHAR LIMIT=NONE] -->
+    <string name="settings_title">NewsApp Settings</string>
+    
+    <string name="settings_news_label">Topics</string>
+    <string name="settings_key" translatable="false">Topics</string>
+    <string name="settings_default" translatable="false">Politics</string>
+    <string name="settings_sports" translatable="false">Sports</string>
+    <string name="settings_education" translatable="false">Education</string>
+    <string name="settings_family" translatable="false">Family</string>
+    <string name="settings_economy" translatable="false">Economy</string>
+
+
+
+</resources>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="settings_news_label">
+        <item>@string/settings_sports</item>
+        <item>@string/settings_education</item>
+        <item>@string/settings_default</item>
+        <item>@string/settings_family</item>
+        <item>@string/settings_economy</item>
+    </string-array>
+</resources>
