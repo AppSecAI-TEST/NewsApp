@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
 
     private static final String LOG_TAG = MainActivity.class.getName();
 
-    private static final String ONLINENEWS_REQUEST_URL = "https://content.guardianapis.com/search?&api-key=2a30369a-1355-4437-b500-710e741ef253";
+    private static final String ONLINENEWS_REQUEST_URL = "https://content.guardianapis.com/search?";
     private static final int NEWS_LOADER_ID = 1;
 
     private static final String API_KEY = "api-key";

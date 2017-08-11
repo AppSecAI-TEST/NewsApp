@@ -120,34 +120,37 @@ public class QueryUtils {
         try {
 
             JSONObject jsonObj = new JSONObject(jsonResponse);
-            JSONArray newsArray = jsonObj.getJSONArray(response);
-
-            if (jsonObj.has(response)) {
-                newsArray = jsonObj.getJSONArray(response);
+            JSONArray newsArray = null;
+            if (jsonObj.has("response")) {
+                jsonObj = jsonObj.getJSONObject("response");
+                if (jsonObj.has("results")) {
+                    newsArray = jsonObj.getJSONArray("results");
+                }
             }
+
 
             for (int i = 0; i < newsArray.length(); i++) {
 
 
                 JSONObject currentOnlineNews = newsArray.getJSONObject(i);
-                JSONObject results = currentOnlineNews.getJSONObject("results");
 
-                String title = results.getString("webTitle");
-                if (results.has("webTitle")) {
-                    title = results.getString("webTitle");
+
+                String title = currentOnlineNews.getString("webTitle");
+                if (currentOnlineNews.has("webTitle")) {
+                    title = currentOnlineNews.getString("webTitle");
                 }
 
-                String section = results.getString("sectionName");
-                if (results.has("sectionName")) {
-                    section = results.getString("sectionName");
+                String section = currentOnlineNews.getString("sectionName");
+                if (currentOnlineNews.has("sectionName")) {
+                    section = currentOnlineNews.getString("sectionName");
                 }
 
                 String author = "";
 
                 JSONArray authorsArray;
 
-                if (results.has("authors")) {
-                    authorsArray = results.getJSONArray("authors");
+                if (currentOnlineNews.has("authors")) {
+                    authorsArray = currentOnlineNews.getJSONArray("authors");
                     for (int j = 0; j < authorsArray.length(); j++) {
                         author += (authorsArray.getString(j));
                     }
@@ -155,14 +158,14 @@ public class QueryUtils {
                     author = "N/A";
                 }
 
-                String date = results.getString("webPublicationDate");
-                if (results.has("webPublicationDate")) {
-                    date = results.getString("webPublicationDate");
+                String date = currentOnlineNews.getString("webPublicationDate");
+                if (currentOnlineNews.has("webPublicationDate")) {
+                    date = currentOnlineNews.getString("webPublicationDate");
                 }
 
-                String url = results.getString("webURL");
-                if (results.has("webURL")) {
-                    url = results.getString("webURL");
+                String url = currentOnlineNews.getString("webUrl");
+                if (currentOnlineNews.has("webUrl")) {
+                    url = currentOnlineNews.getString("webUrl");
                 }
 
                 OnlineNews onlineNews = new OnlineNews(title, section, author, date, url);

@@ -11,7 +11,7 @@ import java.util.ArrayList;
 
 public class OnlineNewsAdapter extends ArrayAdapter<OnlineNews> {
 
-    static class ViewHolder {
+    private static class ViewHolder {
         private TextView titleTextView;
         private TextView sectionTextView;
         private TextView authorTextView;

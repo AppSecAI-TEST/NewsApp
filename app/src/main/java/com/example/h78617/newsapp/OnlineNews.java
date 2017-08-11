@@ -1,6 +1,6 @@
 package com.example.h78617.newsapp;
 
-public class OnlineNews {
+final public class OnlineNews {
 
     private String mTitle;
     private String mSection;
